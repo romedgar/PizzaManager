@@ -24,7 +24,7 @@ public class FormAgregarUsuario extends javax.swing.JFrame {
     
     public FormAgregarUsuario() {
         initComponents();
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../Images/LOGO.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../Images/icon.png")));
     }
 
     /**

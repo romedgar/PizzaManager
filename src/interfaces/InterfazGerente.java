@@ -6,6 +6,7 @@
 package interfaces;
 
 import data.DatosUsuarios;
+import forms.FormAgregarGastos;
 import forms.FormAgregarUsuario;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -24,7 +25,7 @@ public class InterfazGerente extends javax.swing.JFrame {
     public InterfazGerente() {
         initComponents();
         setLocationRelativeTo(null);
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../Images/LOGO.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../Images/icon.png")));
         imgLogo.setIcon(resizeIcon( new ImageIcon(getClass().getResource("/Images/LOGO.png")), imgLogo.getWidth(), imgLogo.getHeight()));
     }
 
@@ -104,6 +105,11 @@ public class InterfazGerente extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(51, 51, 51));
         jLabel3.setText("Registrar Gastos");
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 51, 51));
@@ -180,6 +186,14 @@ public class InterfazGerente extends javax.swing.JFrame {
         du.setLocation(getLocation().x+300,getLocation().y+150);
         du.setVisible(true);        
     }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+       // TODO add your handling code here:
+        FormAgregarGastos fag = null;
+        fag = FormAgregarGastos.getObj();
+        fag.setLocation(getLocation().x+300,getLocation().y+150);
+        fag.setVisible(true);
+    }//GEN-LAST:event_jLabel3MouseClicked
 
     /**
      * @param args the command line arguments
