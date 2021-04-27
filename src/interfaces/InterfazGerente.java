@@ -8,6 +8,7 @@ package interfaces;
 import data.DatosUsuarios;
 import forms.FormAgregarGastos;
 import forms.FormAgregarUsuario;
+import forms.FormEditarPrecios;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.Icon;
@@ -116,6 +117,11 @@ public class InterfazGerente extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setText("Administrar Precios");
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 51, 51));
@@ -203,6 +209,13 @@ public class InterfazGerente extends javax.swing.JFrame {
         fag.setLocation(getLocation().x+300,getLocation().y+150);
         fag.setVisible(true);
     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        FormEditarPrecios fep = null;
+        fep = FormEditarPrecios.getObj();
+        fep.setLocation(getLocation().x+300,getLocation().y+150);
+        fep.setVisible(true);
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments
