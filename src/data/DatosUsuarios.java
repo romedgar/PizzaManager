@@ -5,6 +5,8 @@
  */
 package data;
 
+import java.awt.Toolkit;
+
 /**
  *
  * @author danyc
@@ -20,6 +22,7 @@ public class DatosUsuarios extends javax.swing.JFrame {
     }
     public DatosUsuarios() {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../Images/icon.png")));
     }
 
     /**
