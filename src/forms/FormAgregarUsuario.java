@@ -60,6 +60,7 @@ public class FormAgregarUsuario extends javax.swing.JFrame {
 
         jLabel5.setText("jLabel5");
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Agregar Usuario");
         setAlwaysOnTop(true);
         setResizable(false);

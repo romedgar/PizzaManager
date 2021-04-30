@@ -46,6 +46,7 @@ public class DatosUsuarios extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Eliminar Usuario");
         setAlwaysOnTop(true);
         setPreferredSize(new java.awt.Dimension(650, 450));
