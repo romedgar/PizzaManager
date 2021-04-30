@@ -13,6 +13,7 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import subInterfaz.GenerarCorteCaja;
 
 /**
  *
@@ -142,6 +143,11 @@ public class InterfazGerente extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(51, 51, 51));
         jLabel7.setText("Hacer corte de caja");
         jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -216,6 +222,13 @@ public class InterfazGerente extends javax.swing.JFrame {
         fep.setLocation(getLocation().x+300,getLocation().y+150);
         fep.setVisible(true);
     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        GenerarCorteCaja gcc = null;
+        gcc = GenerarCorteCaja.obj.getObj();
+        gcc.setLocation(getLocation().x+300,getLocation().y+150);
+        gcc.setVisible(true);
+    }//GEN-LAST:event_jLabel7MouseClicked
 
     /**
      * @param args the command line arguments
